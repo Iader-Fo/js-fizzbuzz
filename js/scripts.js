@@ -14,17 +14,18 @@ for (let i = 1; i <= 100; i++) {
 
     // GLI ASSEGNO UNA CLASSE GENERICA PER LO STILE DI BASE
 
-    div.className = 'general-box';
+    // div.className = 'general-box';
 
     // console.log("questo è il nome (classe) del div creato:", div.className)
 
     if (i % 3 == 0 && i % 5 == 0) {
 
         // GLI ASSEGNO LA CLASSE CON IL BG SPECIFICO (DA SPECIFICARE IN CSS O BOOTSTRAP)
-
-        div.className = 'fizzbuzz-box';
-
+        div.classList.add('fizzbuzz');
         div.textContent = "FizzBuzz";
+        // div.className = 'fizzbuzz-box';
+
+        // div.textContent = "FizzBuzz";
 
         // console.log("questo è il nome (classe) del div creato:", div.className)
 
@@ -37,10 +38,11 @@ for (let i = 1; i <= 100; i++) {
     } else if (i % 3 == 0) {
 
         // GLI ASSEGNO LA CLASSE CON IL BG SPECIFICO (DA SPECIFICARE IN CSS O BOOTSTRAP)
-
-        div.className = 'fizz-box';
-
+        div.classList.add('fizz');
         div.textContent = "Fizz";
+        // div.className = 'fizz-box';
+
+        // div.textContent = "Fizz";
 
         // console.log("questo è il nome (classe) del div creato:", div.className)
 
@@ -53,10 +55,11 @@ for (let i = 1; i <= 100; i++) {
     } else if (i % 5 == 0) {
 
         // GLI ASSEGNO LA CLASSE CON IL BG SPECIFICO (DA SPECIFICARE IN CSS O BOOTSTRAP)
-
-        div.className = 'buzz-box';
-
+        div.classList.add('buzz');
         div.textContent = "Buzz";
+        // div.className = 'buzz-box';
+
+        // div.textContent = "Buzz";
 
         // console.log("questo è il nome (classe) del div creato:", div.className)
 
@@ -67,18 +70,20 @@ for (let i = 1; i <= 100; i++) {
         // console.log("questo deve essere buzz")
 
     } else {
-
-        document.getElementById('mio-div').innerHTML += i + " ";
+        div.classList.add('general');
+        div.textContent = i;
+        // document.getElementById('mio-div').innerHTML += i + " ";
 
     }
 
     // FACCIO L'APPEND DEL DIV CREATO NEL "mio-div" (cio' significa che trascrivo questo div nell'HTML)
 
-    const mioDiv = document.querySelector('#mio-div');
+    container.appendChild(div);
+
+    // const mioDiv = document.querySelector('#mio-div');
 
     // console.log("questo è l'Append creato:", mioDiv)
 
-    mioDiv.appendChild(div);
 
     
 }

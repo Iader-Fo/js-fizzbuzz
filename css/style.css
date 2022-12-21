@@ -1,10 +1,46 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.grid{
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
+body{
+    background-color: aqua;
+}
+
+h1{
+    color: white;
+    font-size: 7em;
+    padding: 30px 0;
+}
+
+.general {
+    background-color: blue;
+}
+
+.fizz {
+    background-color: green;
+}
+
+.buzz {
+    background-color: yellow;
+}
+
+.fizzbuzz {
+    background-color: red;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#container>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+    width: calc((100% / 7) - 10px);
+    margin: 5px;
 }
